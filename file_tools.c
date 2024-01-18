@@ -146,7 +146,7 @@ void find_func(char *opcode, char *value, int ln, int format)
  */
 void call_fun(op_func func, char *op, char *val, int ln, int format)
 {
-	stack_t * node;
+	stack_t *node;
 	int flag;
 	int i;
 
@@ -167,7 +167,7 @@ void call_fun(op_func func, char *op, char *val, int ln, int format)
 				err_soukaina(5, ln);
 		}
 
-		node = create_node(atoi(val) *flag);
+		node = create_node(atoi(val) * flag);
 		if (format == 0)
 			func(&node, ln);
 		if (format == 1)
