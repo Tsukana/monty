@@ -76,7 +76,7 @@ void print_str(stack_t **, unsigned int);
 void rotl(stack_t **, unsigned int);
 
 /*Error hanlding*/
-void err_ikram(int error_cd, ...);
+void err_soukaina(int error_cd, ...);
 void more_err(int error_cd, ...);
 void string_err(int error_cd, ...);
 void rotr(stack_t **, unsigned int);

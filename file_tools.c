@@ -11,7 +11,7 @@ void open_file(char *file_name)
 	FILE *fd = fopen(file_name, "r");
 
 	if (file_name == NULL || fd == NULL)
-		err_ikram(2, file_name);
+		err_soukaina(2, file_name);
 
 	read_file(fd);
 	fclose(fd);
@@ -53,7 +53,7 @@ int parse_line(char *buffer, int line_number, int format)
 	const char *delim = "\n ";
 
 	if (buffer == NULL)
-		err_ikram(4);
+		err_soukaina(4);
 
 	opcode = strtok(buffer, delim);
 	if (opcode == NULL)
@@ -132,7 +132,7 @@ void find_func(char *opcode, char *value, int ln, int format)
 	}
 
 	if (flag == 1)
-		err_ikram(3, ln, opcode);
+		err_soukaina(3, ln, opcode);
 }
 
 /**
@@ -160,11 +160,11 @@ void call_fun(op_func func, char *op, char *val, int ln, int format)
 		}
 
 		if (val == NULL)
-			err_ikram(5, ln);
+			err_soukaina(5, ln);
 		for (i = 0; val[i] != '\0'; i++)
 		{
 			if (isdigit(val[i]) == 0)
-				err_ikram(5, ln);
+				err_soukaina(5, ln);
 		}
 
 		node = create_node(atoi(val) *flag);

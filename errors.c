@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * err_ikram  - Prints appropiate error messages determined by their error code.
+ * err_soukaina  - Prints appropiate error messages determined by their error code.
  * @error_cd: The error codes are the following:
  * (1) => The user does not give any file or more than one file to the program.
  * (2) => The file provided is not a file that can be opened or read.
@@ -12,7 +12,7 @@
  * (7) => When the stack it empty for pop.
  * (8) => When stack is too short for operation.
  */
-void err_ikram(int error_cd, ...)
+void err_soukaina(int error_cd, ...)
 {
 	va_list arg;
 	char *op;
